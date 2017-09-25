@@ -1,0 +1,42 @@
+price(1,80).
+>YES ;
+>NO
+	//Day = saturday, Time = 2200, Duration = 11
+	//weekend(saturday, 2200) is true, Rate = 5
+	//overtime(11) is true, Surcharge = 25
+	//80 = 5*11 + 25*(11-10)
+price(2,81).
+>YES ;
+>NO
+	//Day = tuesday, Time = 700, Duration = 9
+	//weekend(tuesday, 700) is false therefore weekday(tuesday, 700) is true, day(tuesday) is true, Rate = 9
+	//overtime(9) is false
+	//81 = 9*9
+price(3, 134).
+>YES ;
+>NO
+	//Day = wednesday, Time = 400, Duration = 12
+	//weekend(wednesday, 400) is false therefore weekday(wednesday, 400) is true, day(wednesday) is false, Rate = 7
+	//overtime(12) is true, Surcharge = 25
+	//134 = 7*12 + 25*(12-10)
+price(4, 45).
+>YES ;
+>NO
+	//Day = sunday, Time = 1300, Duration = 9
+	//weekend(sunday, 1300) is true, Rate = 5
+	//overtime(9) is false
+	//45 = 5*9
+price(5, 42).
+>YES ;
+>NO
+	//Day = friday, Time = 2300, Duration = 6
+	//weekend(friday, 2300) is false, Rate = 7
+	//overtime(6) is false
+	//42 = 7*6
+price(6, 102).
+>YES ;
+>NO
+	//Day = tuesday, Time = 2300, Duration = 11
+	//weekend(tuesday, 2300) is false therefore weekday(tuesday, 2300) is true, day(tuesday) is false, Rate = 7
+	//overtime(11) is true
+	//102 = 7*11 + 25*(11-10)
